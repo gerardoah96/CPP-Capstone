@@ -1,0 +1,1 @@
+/usr/bin/g++-7  -std=c++17 -O3 -DNDEBUG   CMakeFiles/frogger.dir/src/game.cpp.o CMakeFiles/frogger.dir/src/render.cpp.o CMakeFiles/frogger.dir/src/frog.cpp.o CMakeFiles/frogger.dir/src/vehicle.cpp.o CMakeFiles/frogger.dir/src/lane.cpp.o CMakeFiles/frogger.dir/src/main.cpp.o  -o frogger -lSDL2 -lpthread 

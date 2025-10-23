@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /workspace/home/Frogger/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fa8a0/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fa8a0.dir/build.make CMakeFiles/cmTC_fa8a0.dir/build
+make[1]: Entering directory '/workspace/home/Frogger/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_fa8a0.dir/CheckSymbolExists.cxx.o
+/usr/bin/g++-7    -std=c++17    -std=gnu++1z -o CMakeFiles/cmTC_fa8a0.dir/CheckSymbolExists.cxx.o -c /workspace/home/Frogger/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx
+Linking CXX executable cmTC_fa8a0
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa8a0.dir/link.txt --verbose=1
+/usr/bin/g++-7  -std=c++17     CMakeFiles/cmTC_fa8a0.dir/CheckSymbolExists.cxx.o  -o cmTC_fa8a0 
+CMakeFiles/cmTC_fa8a0.dir/CheckSymbolExists.cxx.o: In function `main':
+CheckSymbolExists.cxx:(.text+0x16): undefined reference to `pthread_create'
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_fa8a0.dir/build.make:86: recipe for target 'cmTC_fa8a0' failed
+make[1]: *** [cmTC_fa8a0] Error 1
+make[1]: Leaving directory '/workspace/home/Frogger/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_fa8a0/fast' failed
+make: *** [cmTC_fa8a0/fast] Error 2
+
+File /workspace/home/Frogger/build/CMakeFiles/CMakeTmp/CheckSymbolExists.cxx:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /workspace/home/Frogger/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cd6de/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cd6de.dir/build.make CMakeFiles/cmTC_cd6de.dir/build
+make[1]: Entering directory '/workspace/home/Frogger/build/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_cd6de.dir/CheckFunctionExists.cxx.o
+/usr/bin/g++-7    -std=c++17 -DCHECK_FUNCTION_EXISTS=pthread_create   -std=gnu++1z -o CMakeFiles/cmTC_cd6de.dir/CheckFunctionExists.cxx.o -c /workspace/home/Frogger/build/CMakeFiles/CheckLibraryExists/CheckFunctionExists.cxx
+Linking CXX executable cmTC_cd6de
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cd6de.dir/link.txt --verbose=1
+/usr/bin/g++-7  -std=c++17 -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_cd6de.dir/CheckFunctionExists.cxx.o  -o cmTC_cd6de -lpthreads 
+/usr/bin/ld: cannot find -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_cd6de.dir/build.make:86: recipe for target 'cmTC_cd6de' failed
+make[1]: *** [cmTC_cd6de] Error 1
+make[1]: Leaving directory '/workspace/home/Frogger/build/CMakeFiles/CMakeTmp'
+Makefile:121: recipe for target 'cmTC_cd6de/fast' failed
+make: *** [cmTC_cd6de/fast] Error 2
+
+
